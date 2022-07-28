@@ -1,0 +1,36 @@
+
+.footer {
+    --a-withe: #fff;
+    --fttr-height: 16px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-size: 12px;
+    padding: 50px 0px 50px 0px;
+    text-align: center;
+    position: fixed;
+    bottom:0px;
+    clear: both;
+    width: 100%;
+}
+
+.footer__label {
+    color: var(--a-withe);
+    margin: 0 auto;
+    background: #00000054;
+    clear: both;
+}
+
+.footer__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: var(--fttr-height);
+    margin-bottom: 10px;
+}
+
+.footer__nav a {
+    margin: 10px;
+    list-style: none;
+    color:rgb(255, 255, 255);
+}
