@@ -1,12 +1,11 @@
 import { render } from '@testing-library/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding } from '@fortawesome/free-solid-svg-icons'
 import react from 'react';
 import './index.css';
+import { buildingIcon } from '../static';
 
 function Footer(){
 
-    const FaIcon =  <FontAwesomeIcon icon={faBuilding} size="xl" inverse/>
+    const FaIcon = buildingIcon;    
     return(
         <>
         <footer className="footer">

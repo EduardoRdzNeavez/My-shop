@@ -1,32 +1,38 @@
-import { faHelicopterSymbol, faSpaghettiMonsterFlying } from '@fortawesome/free-solid-svg-icons';
-import { render } from '@testing-library/react';
-import react, { useRef, useState } from 'react';
+import { react, useRef, useState } from 'react';
+import { boxIcon } from '../static'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.css';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-function Header(){
+
+function Header() {
+    const headerIcon = boxIcon;
+    const button = 'search'
     const [name, setname] = useState('');
-   
+
     const showName = () => {
-        if (name !== ''){
-        console.log("hi " + name + "!")
-        } else {
+        if (name !== '') {
+            console.log("hi " + name + "!")
+        } else { 
             window.alert('insert your name')
         }
     }
 
-    const handleChange = (event) =>{
+    const handleChange = (event) => {
         setname(event.target.value);
     }
-    return(
+    return (
         <>
-        <section>
-        <div className="header">
-            <input onChange={handleChange} value={name} type="text"></input>
-            <button onClick={showName} type="submmit">Hola</button>
-        </div>
-        </section>
+            <header className="header">
+            {headerIcon}
+                <nav className="header__nav">
+                    <h2>Resume</h2>
+                    <input onChange={handleChange} value={name} type="text"></input>
+                    <button onClick={showName} type="submmit">{button}</button>
+                </nav>
+            </header>
         </>
-    );   
+    );
 }
 
 export default Header;
